@@ -9,13 +9,13 @@
 # ---------------------------------------------------------------------------------------
 base_info:
   # Your blog website title
-  title: Keep Theme
+  title: Hening Wang
 
   # Your blog website author name
-  author: Keep Team
+  author: Hening Wang
 
   # Your blog website url
-  url: https://keep.xpoet.cn/
+  url: https://heningwang.github.io/my_blog/
 
 # ---------------------------------------------------------------------------------------
 # Theme style settings
@@ -26,13 +26,13 @@ style:
 
   # Your blog website logo image
   # You can use local image, image external link or don’t fill
-  logo: /images/logo.svg
+  logo: /images/logo.png
 
   # Favicon (You can use local image or image external link)
-  favicon: /images/logo.svg
+  favicon: /images/logo_web.png
 
   # Avatar (You can use local image or image external link)
-  avatar: /images/avatar.svg
+  avatar: /images/avatar.png
 
   # Font size, customize font size. (you don't usually have to fill)
   # e.g. font_size: 18px
@@ -94,11 +94,12 @@ style:
 # e.g. `hexo new page categories` or `hexo new page tags`
 menu:
   Home: /
-  Archives: /archives
-  # Categories: /categories
-  # Tags: /tags
+  Blogs: /archives
+  #Categories: /categories
+  #Tags: /tags
+  Now: /now
   # Links: /links
-  # About: /about
+  About: /about
   # Changelog: /changelog
   # ......
 
@@ -145,7 +146,7 @@ post:
   word_count:
     enable: false       # Option values: true | false
     wordcount: false    # Word count, one article. Option values: true | false
-    min2read: false     # Time to read, one article. Option values: true | false
+    min2read: false     # Time to read, one article. Option values: true | false   
 
   # Author label in the post
   author_label:
