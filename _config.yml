@@ -150,11 +150,11 @@ post:
 
   # Author label in the post
   author_label:
-    enable: true # Option values: true | false
+    enable: false # Option values: true | false
 
     # If true, show Lv1, Lv2, Lv3...
     # If false, show custom_label_list
-    auto: true # Option values: true | false
+    auto: false # Option values: true | false
 
     # Label array item can be fill one or more
     custom_label_list: ["Trainee", "Engineer", "Architect"]
@@ -195,10 +195,10 @@ website_count:
   # busuanzi
   # See: http://ibruce.info/2015/04/04/busuanzi/
   busuanzi_count:
-    enable: false   # Option values: true | false
-    site_uv: false  # Option values: true | false
-    site_pv: false  # Option values: true | false
-    page_pv: false  # Option values: true | false
+    enable: true   # Option values: true | false
+    site_uv: true  # Option values: true | false
+    site_pv: true  # Option values: true | false
+    page_pv: true  # Option values: true | false
 
 # ---------------------------------------------------------------------------------------
 # Local Search
@@ -206,15 +206,17 @@ website_count:
 # See: https://github.com/theme-next/hexo-generator-searchdb
 # ---------------------------------------------------------------------------------------
 local_search:
-  enable: false # Option values: true | false
-  preload: false # Preload the search data when the page loads. Option values: true | false
+  enable: true
+  trigger: auto
+  unescape: false
+  preload: true # Option values: true | false # Preload the search data when the page loads. Option values: true | false
 
 # ---------------------------------------------------------------------------------------
 # Comment plugin
 # ---------------------------------------------------------------------------------------
 comment:
-  enable: false   # Option values: true | false
-  use: valine     # Option values: valine | gitalk | twikoo
+  enable: true   # Option values: true | false
+  use: gitalk    # Option values: valine | gitalk | twikoo
 
   # Valine
   # See: https://github.com/xCss/Valine
@@ -226,11 +228,12 @@ comment:
   # Gitalk
   # See: https://github.com/gitalk/gitalk
   gitalk:
-    github_id:        # GitHub repo owner
+    enable: true
+    github_id: Hening Wang      # GitHub repo owner
     github_admins:    # GitHub Admins (in Array type), optional.
-    repository:       # Repository name to store issues
-    client_id:        # GitHub Application Client ID
-    client_secret:    # GitHub Application Client Secret
+    repository: my_blog_gitalk       # Repository name to store issues
+    client_id: f839ec64088f22ac969d       # GitHub Application Client ID
+    client_secret: 4316bdc5014af888cb59b04c0409a606ff712683   # GitHub Application Client Secret
 
   # Twikoo
   # See: https://github.com/imaegoo/twikoo
@@ -270,6 +273,6 @@ pjax:
 # Footer settings
 # ---------------------------------------------------------------------------------------
 footer:
-  since: 2020  # the starting year of your website. Can be null
+  since: 2022  # the starting year of your website. Can be null
   icp:         # ICP record number of your website. Can be null
   upyun:       # If your site is deployed on upyun, your can fill the upyun url. Can be null
