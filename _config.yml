@@ -1,5 +1,5 @@
 ## ======================================================================================
-## Keep v3.4.9
+## Keep v3.5.1
 ## Repository: https://github.com/XPoet/hexo-theme-keep
 ## Document: https://keep-docs.xpoet.cn
 ## ======================================================================================
@@ -15,7 +15,7 @@ base_info:
   author: Hening Wang
 
   # Your blog website url
-  url: https://heningwang.github.io/my_blog/
+  url: https://xpoet.cn/
 
 # ---------------------------------------------------------------------------------------
 # Theme style settings
@@ -42,25 +42,19 @@ style:
   # e.g. font_family: STKaiti, STSong, STHeiti
   font_family:
 
-  # Left side TOC width (you don't usually have to change it)
-  left_side_width: 260px
-
-  # Content area max width (you don't usually have to change it)
-  content_max_width: 920px
-
   # Mouse hover style settings
   hover:
-    # Shadow effect when the mouse hover. Option values: true | false
-    shadow: false
-    # Scale effect when the mouse hover. Option values: true | false
-    scale: false
+    # Shadow effect when the mouse hover.
+    shadow: false  # Option values: true | false
+    # Scale effect when the mouse hovers.
+    scale: false   # Option values: true | false
 
   # First screen style settings
   first_screen:
-    enable: false # Option values: true | false
+    enable: false  # Option values: true | false
 
-    # Set transparent background for header. Option values: true | false
-    header_transparent: false
+    # Set transparent background for header.
+    header_transparent: false  # Option values: true | false
 
     # First screen background image (You can use local image or image external link)
     background_img: /images/bg.svg
@@ -75,17 +69,17 @@ style:
 
     # If enable hitokoto, first screen description is different every time when you enter the site
     hitokoto:
-      enable: false # Option values: true | false
+      enable: false  # Option values: true | false
 
   # Page scroll style settings
   scroll:
     # Show progress bar in top when page scroll
     progress_bar:
-      enable: false # Option values: true | false
+      enable: false  # Option values: true | false
 
     # Show percent when page scroll
     percent:
-      enable: false # Option values: true | false
+      enable: false  # Option values: true | false
 
 # ---------------------------------------------------------------------------------------
 # Navigation menu
@@ -126,19 +120,21 @@ social_contact:
 # Home page article block display settings
 # ---------------------------------------------------------------------------------------
 home_article:
+  # Show category in home page article block.
   category:
-    enable: false  # Show category in home page article block. Option values: true | false
+    enable: false  # Option values: true | false
     limit: 3       # Max number of categories shown in home page article block
+  # Show tags in home page article block.
   tag:
-    enable: false  # Show tags in home page article block. Option values: true | false
+    enable: false  # Option values: true | false
     limit: 5       # Max number of tags shown in home page article block
 
 # ---------------------------------------------------------------------------------------
 # Post page Settings
 # ---------------------------------------------------------------------------------------
 post:
-  # Image align position in the post, Option values: left | center
-  img_align: left
+  # Image align position in the post
+  img_align: left  # Option values: left | center
 
   # Post word count
   # Dependencies: hexo-wordcount (`npm install hexo-wordcount`)
@@ -150,43 +146,46 @@ post:
 
   # Author label in the post
   author_label:
-    enable: false # Option values: true | false
+    enable: true  # Option values: true | false
 
     # If true, show Lv1, Lv2, Lv3...
     # If false, show custom_label_list
-    auto: false # Option values: true | false
+    auto: true    # Option values: true | false
 
     # Label array item can be fill one or more
     custom_label_list: ["Trainee", "Engineer", "Architect"]
 
 # ---------------------------------------------------------------------------------------
-# Code block tools
+# Code block
 # Support code copy and code block collapse
 # ---------------------------------------------------------------------------------------
-code_block_tools:
-  enable: false     # Option values: true | false
-  style: default    # Option values: default | mac
+code_block:
+  # Toolbar include: "code copy", "code block collapse" and "code language"
+  tools:
+    enable: false            # Option values: true | false
+    style: default           # Option values: default | mac
+  highlight_theme: default   # Option values: default | obsidian
 
 # ---------------------------------------------------------------------------------------
 # Table of Contents in the Sidebar
 # ---------------------------------------------------------------------------------------
 toc:
-  enable: false # Option values: true | false
+  enable: false      # Option values: true | false
 
   # Automatically add list number to toc.
-  number: false # Option values: true | false
+  number: false      # Option values: true | false
 
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
-  expand_all: false # Option values: true | false
+  expand_all: false  # Option values: true | false
 
   # If true, open TOC every time when you enter the article page
-  init_open: false # Option values: true | false
+  init_open: false   # Option values: true | false
 
 # ---------------------------------------------------------------------------------------
 # Post copyright info
 # ---------------------------------------------------------------------------------------
 copyright_info:
-  enable: false # Option values: true | false
+  enable: false      # Option values: true | false
 
 # ---------------------------------------------------------------------------------------
 # Website count
@@ -195,10 +194,10 @@ website_count:
   # busuanzi
   # See: http://ibruce.info/2015/04/04/busuanzi/
   busuanzi_count:
-    enable: true   # Option values: true | false
-    site_uv: true  # Option values: true | false
-    site_pv: true  # Option values: true | false
-    page_pv: true  # Option values: true | false
+    enable: false     # Option values: true | false
+    site_uv: false    # Option values: true | false
+    site_pv: false    # Option values: true | false
+    page_pv: false    # Option values: true | false
 
 # ---------------------------------------------------------------------------------------
 # Local Search
@@ -206,20 +205,19 @@ website_count:
 # See: https://github.com/theme-next/hexo-generator-searchdb
 # ---------------------------------------------------------------------------------------
 local_search:
-  enable: true
-  trigger: auto
-  unescape: false
-  preload: true # Option values: true | false # Preload the search data when the page loads. Option values: true | false
+  enable: false   # Option values: true | false
+  preload: false  # Preload the search data when the page loads. Option values: true | false
 
 # ---------------------------------------------------------------------------------------
 # Comment plugin
 # ---------------------------------------------------------------------------------------
 comment:
-  enable: true   # Option values: true | false
-  use: gitalk    # Option values: valine | gitalk | twikoo
+  enable: false   # Option values: true | false
+  use: valine     # Option values: valine | gitalk | twikoo | waline
 
   # Valine
   # See: https://github.com/xCss/Valine
+  #      https://valine.js.org
   valine:
     appid:           # Your leancloud application appid
     appkey:          # Your leancloud application appkey
@@ -227,6 +225,7 @@ comment:
 
   # Gitalk
   # See: https://github.com/gitalk/gitalk
+  #      https://gitalk.github.io
   gitalk:
     enable: true
     github_id: Hening Wang      # GitHub repo owner
@@ -237,10 +236,19 @@ comment:
 
   # Twikoo
   # See: https://github.com/imaegoo/twikoo
+  #      https://twikoo.js.org
   twikoo:
     env_id:         # Tencent Cloud environment id
     region:         # Environment region. If select Guangzhou, fill in "ap-guangzhou".
-    version: 1.6.7  # Twikoo version, default use v1.6.7, you can custom fill
+    version: 1.6.7  # Twikoo version, default use v1.6.7
+
+  # Waline
+  # See: https://github.com/walinejs/waline
+  #      https://waline.js.org/guide/get-started.html
+  waline:
+    server_url:     # Server URL
+    reaction:       # Article reactions
+    version: 2      # Waline version, default use v2
 
 # ---------------------------------------------------------------------------------------
 # RSS
@@ -248,13 +256,13 @@ comment:
 # See: https://github.com/hexojs/hexo-generator-feed
 # ---------------------------------------------------------------------------------------
 rss:
-  enable: false # Option values: true | false
+  enable: false  # Option values: true | false
 
 # ---------------------------------------------------------------------------------------
 # Lazyload image
 # ---------------------------------------------------------------------------------------
 lazyload:
-  enable: false # Option values: true | false
+  enable: false  # Option values: true | false
 
 # ---------------------------------------------------------------------------------------
 # CDN
